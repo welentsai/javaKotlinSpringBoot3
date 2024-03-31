@@ -23,15 +23,12 @@ class FormulaService(
         return formulaRepository.findAll()
     }
 
-    fun findFormulaByCriteria(status: String, automotiveFlag: String?, categories: List<String>?): List<Formula>? {
-        return formulaRepository.findFormulaByCriteria(status, automotiveFlag, categories)
+    fun findFormulaByCriteria(status: String, automotiveFlag: String?, categories: List<String>?, name: String?): List<Formula>? {
+        return formulaRepository.findFormulaByCriteria(status, automotiveFlag, categories, name)
     }
 
     fun findAllBy(status: String): List<Formula> {
         return formulaRepository.findAllBy(status)
     }
 
-    fun searchBy(status: String, automotiveFlag: String?, categories: List<String>?): List<Formula>? {
-        return formulaRepository.findFormulaByCriteria(status, automotiveFlag, categories)
-    }
 }
